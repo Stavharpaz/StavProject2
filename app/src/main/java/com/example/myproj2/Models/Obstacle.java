@@ -1,17 +1,22 @@
-package com.example.myproj;
+package com.example.myproj2.Models;
 
-public class Obstacle implements Collidable{
+import com.example.myproj2.Interfaces.Collidable;
+
+public class Obstacle implements Collidable {
 
     private final int ROWOBSTACLE;
     private int rowIndex;
     private final int COLINDEX;
 
-    public Obstacle(int obstacleRows, int location)
+    private int resourceId;
+
+
+    public Obstacle(int obstacleRows, int location, int resourceId)
     {
         rowIndex =0;
         COLINDEX =location;
         ROWOBSTACLE = obstacleRows-1;
-
+        this.resourceId =resourceId;
     }
 
 
@@ -25,11 +30,17 @@ public class Obstacle implements Collidable{
         return COLINDEX;
     }
 
+    public int getResourceId() {
+        return resourceId;
+    }
+
     @Override
     public int setIndex(int num) {
         rowIndex +=num;
         return rowIndex;
     }
+
+
 
     @Override
     public boolean isMovable(int num) {

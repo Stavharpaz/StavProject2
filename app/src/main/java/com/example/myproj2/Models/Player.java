@@ -1,18 +1,32 @@
-package com.example.myproj;
+package com.example.myproj2.Models;
 
-public class Player implements Collidable{
+import com.example.myproj2.Interfaces.Collidable;
+
+public class Player implements Collidable {
 
     private final int COLPLAYER;
     private final int ROWINDEX;
     private int colIndex;
+    private int distance=0;
+
+
+
+
 
     public Player(int playerCol, int playerLocation)
     {
         ROWINDEX =playerLocation-1;
-        colIndex =1;
+        colIndex =playerCol/2;
         COLPLAYER = playerCol;
     }
 
+    public void setRecord() {
+        this.distance +=1;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
 
     @Override
     public int getROWINDEX() {
@@ -36,5 +50,7 @@ public class Player implements Collidable{
     }
 
 
-
+    public int getCOLPLAYER() {
+        return COLPLAYER;
+    }
 }

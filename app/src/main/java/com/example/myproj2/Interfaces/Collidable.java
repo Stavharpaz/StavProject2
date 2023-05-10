@@ -1,4 +1,4 @@
-package com.example.myproj;
+package com.example.myproj2.Interfaces;
 
 public interface Collidable {
 

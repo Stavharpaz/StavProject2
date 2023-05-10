@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyProj</string>
+    <string name="app_name">MyProj2</string>
     <string name="move_car_left_description">Move car to the left</string>
     <string name="move_car_right_description">Move car to the right</string>
 </resources>
